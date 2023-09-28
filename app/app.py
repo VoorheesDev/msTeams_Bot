@@ -10,7 +10,6 @@ from utils import get_bot_adapter, get_teams_connector, send_message
 
 
 CONVERSATION_ID = os.environ.get("CONVERSATION_ID")
-PORT = os.environ.get("PORT", 3978)
 
 ADAPTER = get_bot_adapter()
 BOT = EchoBot()
@@ -48,4 +47,4 @@ APP.router.add_post("/api/notify", notify)
 
 
 if __name__ == "__main__":
-    web.run_app(APP, port=PORT)
+    web.run_app(APP, port=3978)
