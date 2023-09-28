@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: bot_app
+    build: .
+    env_file: .env
+    command: python app/app.py
+    ports:
+      - "3978:3978"
+    restart: always
+
+  ngrok:
+    image: wernight/ngrok
+    ports:
+      - "4040:4040"
+    command: ["ngrok", "http", "app:3978"]
+    restart: unless-stopped
+    depends_on:
+      - app
