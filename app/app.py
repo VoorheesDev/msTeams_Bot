@@ -9,7 +9,7 @@ from bots import EchoBot
 from utils import get_bot_adapter, get_teams_connector, send_message
 
 
-CONVERSATION_ID = os.environ.get("CONVERSATION_ID")
+CONVERSATION_ID = os.environ.get("CONVERSATION_ID", "")
 
 ADAPTER = get_bot_adapter()
 BOT = EchoBot()
