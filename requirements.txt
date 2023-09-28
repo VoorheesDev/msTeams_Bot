@@ -1,0 +1,4 @@
+botbuilder-integration-aiohttp>=4.14.0
+black==23.3.0
+flake8==5.0.4
+isort==5.11.5
